@@ -1,0 +1,1 @@
+Simple AJAX request to Open FDA. Haven't seen a lot of repositories and wanted to add my very minor contribution. I would love for someone to pull this and help me parse the data to see the effects of a drug that a user searches. 
