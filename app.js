@@ -5,10 +5,13 @@ var searchTerm = document.getElementById("fdaSearch").value
 
 $.ajax({
    url: "https://api.fda.gov/drug/event.json?api_key="+ key + "&search=" + searchTerm+"&count=patient.reaction.reactionmeddrapt.exact",
-   dataType: "text",
+   dataType: "json",
    success: function(data) {
-    $("body").prepend(data)
-    console.log(data.results.terms)
+   	for(i=0;i<data.results.length;i++){
+    $("body").prepend(data.results[i].term)
+
+    console.log(data.results[i].term)
+}
    },
    type: 'GET'
 
