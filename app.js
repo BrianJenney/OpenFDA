@@ -7,8 +7,9 @@ $.ajax({
    url: "https://api.fda.gov/drug/event.json?api_key="+ key + "&search=" + searchTerm+"&count=patient.reaction.reactionmeddrapt.exact",
    dataType: "json",
    success: function(data) {
-   	for(i=0;i<data.results.length;i++){
-    $("body").prepend(data.results[i].term)
+   	for(i=0;i<15;i++){
+    var results = (data.results[i].term)
+    $("body").append(results + " " + "<br>")
 
     console.log(data.results[i].term)
 }
