@@ -1,1 +1,13 @@
+#wrapper {
+	text-align: center;
+	margin: 3em auto;
 
+}
+
+#title {
+	margin-bottom: 1em;
+}
+
+input {
+	margin-bottom: 1em;
+}
