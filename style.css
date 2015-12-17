@@ -11,3 +11,33 @@
 input {
 	margin-bottom: 1em;
 }
+
+@import url(https://fonts.googleapis.com/css?family=Maiden+Orange);
+
+*{
+  text-align: center;
+  font-family: 'Maiden Orange', cursive;
+}
+
+h1{
+  font-size: 350%;
+}
+
+#fdaSearch{
+  width: 20%;
+  height: 35px;
+  font-size: 220%;
+}
+
+button{
+  width: 10%;
+  height: 40px;
+  font-size: 200%;
+}
+
+#bottle{
+  width: 10%;
+  position: relative;
+  margin-top: -10%;
+  margin-left: -40%;
+}
