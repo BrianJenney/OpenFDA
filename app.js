@@ -4,13 +4,19 @@ function search(){
 	var searchTerm = document.getElementById("fdaSearch").value
 
 	$.ajax({
+    
 	   	url: "https://api.fda.gov/drug/event.json?api_key="+ key + "&search=" + searchTerm+"&count=patient.reaction.reactionmeddrapt.exact",
 	   	dataType: "json",
 	   	success: function(data) {
 	   		for(i=0;i<15;i++){
 	    		var results = (data.results[i].term)
-	    		$("#effects").append(results + " " + "<br>")
+          if(data.results[i].term === "DRUG INEFFECTIVE"){
+            results[i].term = ""
+          }else{
+            		$("#effects").append(results + " " + "<br>")
 				console.log(data.results[i].term)
+          }
+	    
 			}
 	   	},
 	   type: 'GET'
